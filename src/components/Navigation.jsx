@@ -7,6 +7,13 @@ import StateContext from '../stateManager'
 
 function Navigation() {
   const { toggle } = useContext(StateContext)
+ window.onscroll = ()=> {
+  const header = document.getElementById('header')
+  let headerPositon = document.documentElement.scrollTop || document.body.scrollTop
+  if (headerPositon < 5) {
+    header.classList.remove('activeheading')
+  } 
+ }
   return (
     <header id='header' className='fixed-top p-3'>
       <div className="container-fluid">

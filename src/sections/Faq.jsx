@@ -1,71 +1,56 @@
-import React, {useState} from 'react'
-import {FaChevronDown, FaIcons} from 'react-icons/fa'
-import {FaChevronUp} from 'react-icons/fa'
+import React from 'react'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+} from "@chakra-ui/accordion"
+
 function Faq() {
-  const [slide, setSlide] = useState(false)
 
-  const handleQuestionClicked = (e) => {
-
-    const answers = document.querySelectorAll('.heading')
-    answers.forEach(answer => {
-     
-      if (e.target == answer) {
-         answer.classList.toggle('slide')
-      } else answer.classList.remove('slide')
-    }) 
-
-  }
 
   return (
     <div id="faq" className='vh-100 mt-5 pt-5'>
       <div className="row m-0 h-100 justify-content-center align-items-center">
-        <div className="col-sm-8">
+        <div className="col-sm-10">
           <h1 className="text-title">FAQ</h1>
-          <div className="accordion">
-            <div className="heading d-flex align-items-center justify-content-between" onClick={handleQuestionClicked}>
-              <h4 className="question">Question 1</h4>
-              {  slide 
-                ? <FaChevronDown  />
-                : <FaChevronUp rotate={"90deg"}/>
-              }
-            </div>
-            <p className="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi aliquid atque ullam harum delectus quod dolorum temporibus sit, amet laborum?</p>
-          </div>
-          <div className="accordion">
-            <div className="heading d-flex align-items-center justify-content-between" onClick={handleQuestionClicked}>
-              <h4 className="question">Question 2</h4>
-              {  slide 
-                ? <FaChevronDown />
-                : <FaChevronUp />
-              }
-            </div>
-            <p className="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi aliquid atque ullam harum delectus quod dolorum temporibus sit, amet laborum?</p>
-          </div>
-          <div className="accordion">
-            <div className="heading d-flex align-items-center justify-content-between" onClick={handleQuestionClicked}>
-              <h4 className="question">Question 3</h4>
-              {  slide 
-                ? <FaChevronDown />
-                : <FaChevronUp />
+          <Accordion allowToggle >
+            <AccordionItem>
+              <h4>
+                <AccordionButton className='question'>Section 1 title</AccordionButton>
+              </h4>
+              <AccordionPanel className='answer'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet sapiente deserunt autem, ipsum earum veniam incidunt? Ipsum, repellat optio tempora perferendis nisi vero perspiciatis rerum impedit ipsam nihil aperiam sapiente quasi, dolor officia quos earum. Ducimus magnam explicabo expedita.</AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <h4>
+                <AccordionButton className='question'>Section 1 title</AccordionButton>
+              </h4>
+              <AccordionPanel className='answer'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet sapiente deserunt autem, ipsum earum veniam incidunt? Ipsum, repellat optio tempora perferendis nisi vero perspiciatis rerum impedit ipsam nihil aperiam sapiente quasi, dolor officia quos earum. Ducimus magnam explicabo expedita.</AccordionPanel>
+            </AccordionItem>
 
-              }
-            </div>
-            <p className="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi aliquid atque ullam harum delectus quod dolorum temporibus sit, amet laborum?</p>
-          </div>
-          <div className="accordion">
-            <div className="heading d-flex align-items-center justify-content-between" onClick={handleQuestionClicked}>
-              <h4 className="question">Question 4</h4>
-              {  slide 
-                ? <FaChevronDown />
-                : <FaChevronUp />
+            <AccordionItem>
+              <h4>
+                <AccordionButton className='question'>Section 1 title</AccordionButton>
+              </h4>
+              <AccordionPanel className='answer'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet sapiente deserunt autem, ipsum earum veniam incidunt? Ipsum, repellat optio tempora perferendis nisi vero perspiciatis rerum impedit ipsam nihil aperiam sapiente quasi, dolor officia quos earum. Ducimus magnam explicabo expedita.</AccordionPanel>
+            </AccordionItem>
 
-              }
-            </div>
-            <p className="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi aliquid atque ullam harum delectus quod dolorum temporibus sit, amet laborum?</p>
-          </div>
+            <AccordionItem>
+              <h4>
+                <AccordionButton className='question'>Section 1 title</AccordionButton>
+              </h4>
+              <AccordionPanel className='answer'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet sapiente deserunt autem, ipsum earum veniam incidunt? Ipsum, repellat optio tempora perferendis nisi vero perspiciatis rerum impedit ipsam nihil aperiam sapiente quasi, dolor officia quos earum. Ducimus magnam explicabo expedita.</AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h4>
+                <AccordionButton className='question'>Section 2 title</AccordionButton>
+              </h4>
+              <AccordionPanel className='answer'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas tempore soluta incidunt deserunt sapiente rem ab eveniet dolor, et eos, quod veniam dolorum natus! Voluptas ipsum quidem veniam omnis incidunt. In quas eaque vitae, dolorem voluptatem quibusdam! Fugiat, at laudantium?</AccordionPanel>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
-      
     </div>
   )
 }

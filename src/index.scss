@@ -20,28 +20,35 @@ img {
   width: 100%;
 }
 
-body {
-  font-family: 'Lemon', cursive;
-  background-color: #333;
-  color: $light-color;
+.background {
   background: url("./assets/background.jpg") center center/cover no-repeat;
-  background-position-x: right;
+  // background-position-x: right;
   position: relative;
+  background-color: rgba($color: #000000, $alpha: .8);
 
   &::before {
     content: "";
     position: absolute;
-    background-color: rgba($color: #000000, $alpha: .75);
+    background-color: rgba($color: #000000, $alpha: .8);
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    // z-index: -1;
   }
+}
+
+body {
+  font-family: 'Lemon', cursive;
+  background-color: #333;
+  color: $light-color;
+
 }
 
 // Navigation
 #header {
   backdrop-filter: blur(3px);
+  border-bottom: 1px solid rgba($color: #9a974f , $alpha: .4);
 
   .toggler {
     transition: 1s;
@@ -78,22 +85,6 @@ body {
     transform: scale(1.05);
     color: $pri-color;
   }
-}
-
-.logo-bg-img {
-  position: absolute;
-  z-index: -1;
-  opacity: .3;
-  width: 100%;
-  height: 100%;
-  
-}
-
-
-#about > img {
-  top: -10px;
-  position: absolute;
-  height: 80%;
 }
 
 
@@ -167,9 +158,7 @@ body {
   
  }
 
- .slide {
-  background: red;
- }
+
 
  /* Left side */
 
@@ -277,11 +266,39 @@ body {
 
 
 .roadmap-bg-img {
+
   position: absolute;
-  bottom: 100px;
+  // bottom: 100px;
+  top: 0;
   right: 0;
-  z-index: -1;
   opacity: .7;
+  background-color: red;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: .8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+// Faq
+.question {
+  padding: 1rem;
+  background:  linear-gradient(#48510a, #b4b15e)
+}
+
+.answer {
+  // border: #48510a 1px solid;
+  padding: 1rem;
+  background-color: #b4b15e;
+  color: #111111;
+  margin-bottom: 5px;
 }
 
 

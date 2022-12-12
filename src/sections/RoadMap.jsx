@@ -1,5 +1,4 @@
 import {useEffect } from 'react'
-import faq_tree from '../assets/faq_tree.png'
 
 function RoadMap() {
 
@@ -31,7 +30,8 @@ function RoadMap() {
 
   return (
     <div id="roadmap" className='pt-5 mt-5 position-relative'>
-      <img src={faq_tree} alt="" className='breathing roadmap-bg-img h-75' />
+      <div className="roadmap-bg-img">
+      </div>
       <div className="row m-0 justify-content-center align-items-center">
         <div className="col-sm-8">
           <h1 className="text-title my-5">Roadmap</h1>
