@@ -1,4 +1,5 @@
 import {useEffect } from 'react'
+import bananatree from '../assets/bananatree.png'
 
 function RoadMap() {
 
@@ -29,12 +30,12 @@ function RoadMap() {
   }, [])
 
   return (
-    <div id="roadmap" className='pt-5 mt-5 position-relative'>
-      <div className="roadmap-bg-img">
-      </div>
+    <div id="roadmap" className='pt-5  position-relative'>
+      
+        <img src={bananatree} alt="" className='roadmap-bg-img position-absolute breathing' />
       <div className="row m-0 justify-content-center align-items-center">
         <div className="col-sm-8">
-          <h1 className="text-title my-5">Roadmap</h1>
+          <h1 className="text-title my-5" data-aos="fade-up">Roadmap</h1>
             <div className="timeline">
               <ul className="items">
                 <li className="item">

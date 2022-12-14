@@ -9,6 +9,8 @@ import Navigation, { Navbar } from "./components/Navigation";
 import Aos from "aos"
 import "aos/dist/aos.css"
 import StateContext from './stateManager';
+import Modal from './components/Modal';
+import Footer from './components/Footer';
 
 
 
@@ -29,17 +31,19 @@ function App() {
 
   if (loading) return <h1 className='fixed-top vh-100 bg-dark'>loading...</h1>
   return (
-    <div className='background'>
+    <div>
       <Navigation />
-      <div className='d-lg-none bg-light'>
+      <div className='d-lg-none'>
         <Navbar toggle={toggle} />
       </div>
+      <Modal />
       <Home />
       <About />
       <Collection />
       <RoadMap />
       <Mint />
       <Faq />
+      <Footer />
     </div>
   );
 }

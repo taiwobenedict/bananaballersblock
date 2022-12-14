@@ -16,8 +16,8 @@ function Collection() {
           <div className="row  mt-5 justify-content-center align-items-center flex-wrap m-0">
             <div className="col-sm-6 col-lg-5  align-self-end pb-5 pb-sm-0">
               <div className="row justify-content-around ">
-                <div className="col-4 col-sm-5">
-                  <img src={BANANA3} alt="" className='banana' data-aos="zoom-in"/>
+                <div className="col-4 d-flex col-sm-5">
+                  <img src={BANANA1} alt="" className='banana pt-2 d-block' data-aos="zoom-in"/>
                 </div>
                 <div className="col-4 d-flex col-sm-5">
                   <img src={BANANA4} alt="" className='banana' data-aos="zoom-in"/>
@@ -27,7 +27,7 @@ function Collection() {
             <div className="col-sm-6 col-lg-5  align-self-end">
               <div className="row  justify-content-around ">
                 <div className="col-4 d-flex col-sm-5">
-                  <img src={BANANA1} alt="" className='banana pt-2 d-block' data-aos="zoom-in"/>
+                  <img src={BANANA3} alt="" className='banana' data-aos="zoom-in"/>
                 </div>
                 <div className="col-4  col-sm-5">
                   <img src={BANANA2} alt="" className='banana' data-aos="zoom-in"/>

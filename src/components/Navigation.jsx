@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext , useEffect} from 'react'
 import CtaButton from './CtaButton'
 import Social from './Social'
 import Toggler from './Toggler'
@@ -7,22 +7,28 @@ import StateContext from '../stateManager'
 
 function Navigation() {
   const { toggle } = useContext(StateContext)
- window.onscroll = ()=> {
-  const header = document.getElementById('header')
-  let headerPositon = document.documentElement.scrollTop || document.body.scrollTop
-  if (headerPositon < 5) {
-    header.classList.remove('activeheading')
-  } 
- }
+  useEffect(()=>{
+   window.onscroll = ()=> {
+    const header =(document.getElementById('header'))
+    let headerPositon = document.documentElement.scrollTop || document.body.scrollTop
+    if (Number(headerPositon) < 20) {
+      header.classList.remove('activeheading')
+    } else header.classList.add('activeheading')
+   }
+
+  },[])
   return (
-    <header id='header' className='fixed-top p-3'>
+    <header id='header' className='fixed-top p-3 activeheading'>
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className=" d-flex align-items-center">
             <div className="d-none d-lg-block">
             <Navbar toggle={toggle} />
             </div>
+
             <CtaButton>CONNECT WALLET</CtaButton>
+          
+            
             <div className="d-none d-sm-block d-lg-none ">
               <Social />
             </div>

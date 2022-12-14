@@ -13,8 +13,8 @@ function Faq() {
     <div id="faq" className='vh-100 mt-5 pt-5'>
       <div className="row m-0 h-100 justify-content-center align-items-center">
         <div className="col-sm-10">
-          <h1 className="text-title">FAQ</h1>
-          <Accordion allowToggle >
+          <h1 className="text-title" data-aos="fade-up">FAQ</h1>
+          <Accordion allowToggle data-aos="fade-right-down">
             <AccordionItem>
               <h4>
                 <AccordionButton className='question'>Section 1 title</AccordionButton>
