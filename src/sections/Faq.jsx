@@ -5,12 +5,14 @@ import {
   AccordionButton,
   AccordionPanel,
 } from "@chakra-ui/accordion"
+import monkey from '../assets/monkey.png'
 
 function Faq() {
 
 
   return (
     <div id="faq" className='vh-100 mt-5 pt-5'>
+      <img class="swingimage" src={monkey.png} />
       <div className="row m-0 h-100 justify-content-center align-items-center">
         <div className="col-sm-10">
           <h1 className="text-title" data-aos="fade-up">FAQ</h1>
